@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 2 - Aula 9</title>
+  </head>
+
+  <body onload="createForm()">
+    <script>
+      function addToBody(tag, obj) {
+        let element = document.createElement(tag);
+        for (let prop in obj) {
+          element[prop] = obj[prop];
+        }
+        document.body.appendChild(element);
+      }
+
+      function createForm() {
+        addToBody('label', { 'innerHTML': 'Nome jogador 1: ' });
+        addToBody('input', { 'id': 'nome1', 'placeholder': 'Ex: leo' });
+        addToBody('span', { 'innerHTML': '&emsp;' });
+        addToBody('label', { 'innerHTML': 'Nome jogador 2: ' });
+        addToBody('input', { 'id': 'nome2', 'placeholder': 'Ex: yudi' });
+        addToBody('span', { 'innerHTML': '&emsp;' });
+        addToBody('button', { 'innerHTML': 'Iniciar', 'id': 'iniciar' });
+        addToBody('br');
+        addToBody('br');
+        document.getElementById('iniciar').addEventListener('click', function () {
+          let nome1 = document.getElementById('nome1').value;
+          let nome2 = document.getElementById('nome2').value;
+          addToBody('span', { 'innerHTML': `${nome1} &emsp; ${nome2}` });
+          let pt1 = 0, pt2 = 0;
+          let values = [];
+          while (pt1 < 100 && pt2 < 100) {
+            for (let i = 0; i < 4; i++) {
+              values[i] = Math.floor(Math.random() * 7);
+              if (i % 2 == 0)
+                pt1 += values[i];
+              else
+                pt2 += values[i];
+            }
+            addToBody('br');
+            addToBody('span', { 'innerHTML': `${values[0]}+${values[2]} &emsp; ${values[1]}+${values[3]}` })
+          }
+          addToBody('br');
+          addToBody('span', { 'innerHTML': `${nome1}: ${pt1} &emsp; ${nome2}: ${pt2}` })
+          addToBody('br');
+          if (pt1 > pt2)
+            addToBody('span', { 'innerHTML': `${nome1} VENCEDOR!!!` })
+          else if (pt2 > pt1)
+            addToBody('span', { 'innerHTML': `${nome2} VENCEDOR!!!` })
+          else
+            addToBody('span', { 'innerHTML': `EMPATE` })
+          addToBody('br');
+          addToBody('br');
+
+        }, false);
+      }
+    </script>
+  </body>
+
+</html>

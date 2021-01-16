@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      html,
+      body {
+        height: 100vh;
+      }
+
+      .row {
+        display: flex;
+      }
+
+      .sidemenu {
+        width: 30%;
+        border-right: 5px solid black;
+        height: 100vh;
+      }
+
+      .main {
+        width: 70%;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .main>div {
+        margin: 10px;
+        width: 17%;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body onload="createContent()">
+    <div class="row">
+      <div class="sidemenu">
+        <ul class="list"></ul>
+      </div>
+      <div class="main"></div>
+    </div>
+  </body>
+
+
+  <script>
+    function createContent() {
+      let list = document.getElementsByClassName('list')[0];
+      let main = document.getElementsByClassName('main')[0];
+      addList(10, list);
+      addBlocks(15, main);
+    }
+
+    function addList(quant, list) {
+      for (let i = 0; i < quant; i++) {
+        let item = document.createElement('li');
+        item.innerHTML = 'categoria ' + (i + 1);
+        list.appendChild(item);
+      }
+    }
+
+    function addBlocks(quant, div) {
+      for (let i = 0; i < quant; i++) {
+        let block = document.createElement('div');
+        block.style.backgroundColor = 'black';
+        div.appendChild(block);
+      }
+    }
+  </script>
+
+</html>

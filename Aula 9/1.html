@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1 - Aula 9</title>
+  </head>
+
+  <body onload="createForm()">
+
+  </body>
+
+  <script>
+    function createForm() {
+      let div = document.createElement('div');
+      document.body.append(div);
+
+      let labelNome = document.createElement('label');
+      labelNome.innerHTML = 'Nome: ';
+
+      let inputNome = document.createElement('input');
+      inputNome.placeholder = 'Ex: leo';
+      inputNome.id = 'nome';
+
+      div.appendChild(labelNome);
+      div.appendChild(inputNome);
+
+      div.appendChild(document.createElement('br'));
+
+      let labelIdade = document.createElement('label');
+      labelIdade.innerHTML = 'Idade: '
+
+      let inputIdade = document.createElement('input');
+      inputIdade.placeholder = 'Ex: 18';
+      inputIdade.id = 'idade';
+
+      div.appendChild(labelIdade);
+      div.appendChild(inputIdade);
+
+      div.appendChild(document.createElement('br'));
+
+      let button = document.createElement('button');
+      button.innerHTML = 'Enviar';
+
+      div.appendChild(button);
+
+      button.addEventListener('click', function () {
+        let respostas = [];
+        respostas.nome = document.getElementById('nome').value;
+        respostas.idade = document.getElementById('idade').value;
+        console.log(respostas);
+        window.alert(`Nome: ${respostas.nome}\nIdade: ${respostas.idade}`);
+      }, false);
+    }
+  </script>
+
+</html>

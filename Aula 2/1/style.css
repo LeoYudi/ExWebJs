@@ -1,0 +1,62 @@
+* {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .main {
+      display: flex;
+      justify-content: stretch;
+    }
+
+    .sidebar {
+      width: 25%;
+      height: 100%;
+      background-color: rgb(233, 233, 233);
+      padding: 10px 20px;
+    }
+
+    .imagem {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .imagem img {
+      border: 1px solid black;
+      border-radius: 1000px;
+    }
+
+    .nomes {
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .nomes p {
+      margin: 0;
+    }
+
+    .nomes .nome {
+      margin-top: 10px;
+    }
+
+    .nomes .apelido {
+      color: rgb(77, 77, 77);
+      font-size: 1.3rem;
+    }
+
+    hr {
+      margin-bottom: 10px;
+    }
+
+    .container h1 {
+      margin-bottom: 0;
+    }
+
+    .sobre-mim {
+      text-align: justify;
+      margin-bottom: 10px;
+    }

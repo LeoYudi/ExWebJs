@@ -1,0 +1,39 @@
+*{
+  background-color: gray;
+  color: white;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.screen{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas: 
+  "header header"
+  "sidebar main"
+  "footer footer";
+}
+
+.header{
+  grid-area: header;
+  background-color: black;
+}
+
+.sidebar{
+  grid-area: sidebar;
+  background-color: red;
+}
+
+.main{
+  grid-area: main;
+  background-color: gray;
+}
+
+.footer{
+  grid-area: footer;
+  background-color: blue;
+}

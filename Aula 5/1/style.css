@@ -1,0 +1,182 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(34, 34, 34);
+  color: white;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  background-color: rgb(49, 49, 49);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid gray;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  font-family: Roboto;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.inp .label {
+  position: absolute;
+  top: 0px;
+  left: 12px;
+  min-width: 200px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.inp .focus-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+.inp input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 16px 12px 0 12px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(49, 49, 49);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  color: white;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.inp input:hover {
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.inp input:not(:placeholder-shown)+.label {
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus {
+  background: rgba(0, 0, 0, 0.05);
+  outline: none;
+  box-shadow: inset 0 -2px 0 white;
+}
+
+.inp input:focus+.label {
+  color: white;
+  -webkit-transform: translate3d(0, -16px, 0) scale(0.75);
+  transform: translate3d(0, -16px, 0) scale(0.75);
+}
+
+.inp input:focus+.label+.focus-bg {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+#input-data>input {
+  margin-top: 20px;
+}
+
+#input-data>span {
+  margin: 0 10px;
+}
+
+#input-genero {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+#input-genero>input {
+  margin: 0 10px;
+}
+
+#descricao {
+  background-color: rgb(49, 49, 49);
+  border: 2px solid rgb(83, 83, 83);
+  border-radius: 5px;
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.div-descricao {
+  margin-top: 20px;
+}
+
+#botao {
+  background-color: rgb(49, 49, 49);
+  border: 2px solid rgb(83, 83, 83);
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+#botao:hover {
+  background-color: rgb(65, 65, 65);
+}
+
+.div-botao {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

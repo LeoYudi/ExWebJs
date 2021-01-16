@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+  </head>
+
+  <body>
+    <div class="tabela">
+      <table>
+        <tr>
+          <th class="pequeno">
+            Código
+          </th>
+          <th class="grande">
+            Nome
+          </th>
+          <th class="grande">
+            Descrição
+          </th>
+          <th class="pequeno">
+            Preço Entrada
+          </th>
+          <th class="pequeno">
+            Qtd.<br> Estoque
+          </th>
+          <th class="pequeno">
+            Qtd. Solicitada
+          </th>
+        </tr>
+        <tr>
+          <td>
+            0001
+          </td>
+          <td>
+            Torneira
+          </td>
+          <td>
+            Deca aço curvado
+          </td>
+          <td>
+            R$ 59,90
+          </td>
+          <td>
+            100
+          </td>
+          <td>
+            10
+          </td>
+        </tr>
+        <tr>
+          <td>
+            0001
+          </td>
+          <td>
+            Torneira
+          </td>
+          <td>
+            Deca aço curvado
+          </td>
+          <td>
+            R$ 59,90
+          </td>
+          <td>
+            100
+          </td>
+          <td>
+            10
+          </td>
+        </tr>
+        <tr>
+          <td>
+            0001
+          </td>
+          <td>
+            Torneira
+          </td>
+          <td>
+            Deca aço curvado
+          </td>
+          <td>
+            R$ 59,90
+          </td>
+          <td>
+            100
+          </td>
+          <td>
+            10
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+
+    .grande {
+      width: 20%;
+    }
+
+    .pequeno {
+      width: 10%;
+    }
+
+    .tabela {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      font-size: 18px;
+      background-color: gray;
+      color: white;
+    }
+  </style>
+
+</html>

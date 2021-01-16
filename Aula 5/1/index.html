@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="card">
+        <form action="">
+          <label for="nome" class="inp">
+            <input type="text" id="nome" placeholder="&nbsp;">
+            <span class="label">Nome Completo</span>
+            <span class="focus-bg"></span>
+          </label>
+          <label for="data" id="input-data">
+            <span>Data de nascimento</span>
+            <input type="date" id="data">
+          </label>
+          <div id="input-genero">
+            Gênero
+            <input type="radio" name="genero" id="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" id="feminino">
+            <label for="feminino">Feminino</label>
+          </div>
+          <label for="cidade" class="inp">
+            <input type="text" id="cidade" placeholder="&nbsp;">
+            <span class="label">Cidade</span>
+            <span class="focus-bg"></span>
+          </label>
+          <label for="pais" class="inp">
+            <input type="text" id="pais" placeholder="&nbsp;">
+            <span class="label">País</span>
+            <span class="focus-bg"></span>
+          </label>
+          <div class="div-descricao">
+            <label for="descricao">Descrição<br></label>
+            <textarea name="descricao" id="descricao" rows="10" placeholder="lorem ipsum"></textarea>
+          </div>
+          <div class="div-botao">
+            <input type="submit" value="Cadastrar" id="botao">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>
